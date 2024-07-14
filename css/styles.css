@@ -1,0 +1,290 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--primary-background-color: #fcf5e9;
+	--dark-color: #333;
+	--container-narrow: 900px;
+	--container-normal: 1100px;
+	--container-wide: 1400px;
+}
+
+body {
+	font-family: "Open Sans", sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: var(--dark-color);
+}
+
+ul {
+	list-style: none;
+}
+
+img {
+	width: 100%;
+}
+
+/* Utility Classes */
+.bg-primary {
+	background-color: var(--primary-background-color);
+	color: var(--dark-color);
+}
+
+.section-heading {
+	font-size: 1.6rem;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.dark-bg {
+	background-color: var(--dark-color);
+	color: #f4f4f4;
+}
+
+.dark-bg .bg-primary {
+	padding: 0 0.3rem;
+}
+
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+.btn {
+	display: inline-block;
+	padding: 1rem 2rem;
+	border: 1px solid var(--dark-color);
+	background: transparent;
+	font-family: inherit;
+	font-size: inherit;
+	cursor: pointer;
+}
+
+.btn:hover {
+	background-color: #333;
+	color: #f4f4f4;
+}
+
+/* Container */
+.container {
+	max-width: var(--container-normal);
+	margin: 0 auto;
+	padding: 0 1.5rem;
+}
+
+.container-lg {
+	max-width: var(--container-wide);
+}
+
+.container-sm {
+	max-width: var(--container-narrow);
+}
+
+/* Header */
+.header {
+	margin: 1.5rem auto;
+}
+
+.header .logo {
+	width: 130px;
+}
+
+.header .header-flex {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header nav .main-menu {
+	display: flex;
+	gap: 1rem;
+}
+
+.header nav .main-menu a {
+	padding: 0.5rem 1rem;
+	border: none;
+	border-radius: 0.25rem;
+}
+
+.header nav .main-menu a:hover {
+	background-color: var(--primary-background-color);
+}
+
+.current {
+	background-color: var(--primary-background-color);
+	font-weight: 600;
+}
+
+/* Hero */
+.hero {
+	height: 500px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.hero h2 {
+	font-size: 3rem;
+	font-weight: normal;
+	line-height: 1.4;
+}
+
+.gallery-flex {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+.gallery-item {
+	width: calc(33.3333% - 20px);
+}
+
+.gallery-item:hover {
+	opacity: 0.9;
+}
+
+.gallery-item,
+.gallery-item img {
+	border-radius: 10px;
+}
+
+/* Footer */
+.footer {
+	border-top: 1px solid #aaa;
+	padding: 2rem 1.5rem;
+	margin-top: 2rem;
+}
+
+.footer .footer-flex {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.footer img {
+	width: 120px;
+	height: 35px;
+}
+
+.footer h4 {
+	font-size: 1rem;
+	margin-bottom: 0.5rem;
+}
+
+.footer a {
+	margin: 0.2rem;
+}
+
+/* Services */
+.services {
+	padding: 3rem 0 4rem;
+}
+
+.services-flex {
+	display: flex;
+	gap: 2rem;
+}
+
+.service-item h4 {
+	font-size: 1.1rem;
+	margin-bottom: 0.8rem;
+}
+
+/* Team */
+.team {
+	padding: 3rem 0 4rem;
+}
+
+.team-flex {
+	display: flex;
+	gap: 1.4rem;
+}
+
+.team img {
+	border-radius: 10px;
+}
+
+/* Contact */
+.contact {
+	padding: 3rem 0 4rem;
+}
+
+.contact p {
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.form-group {
+	margin: 2rem;
+}
+
+.contact input,
+.contact textarea {
+	border: none;
+	border-bottom: 1px solid var(--dark-color);
+	width: 100%;
+	font-family: inherit;
+	font-size: inherit;
+	padding-bottom: 1rem;
+}
+
+.contact textarea {
+	height: 200px;
+	resize: none;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+	outline: none;
+}
+
+.contact button {
+	width: 100%;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+	.hero {
+		height: 300px;
+	}
+
+	.hero h2 {
+		font-size: 1.8rem;
+		line-height: 1.6;
+	}
+
+	.gallery-item {
+		width: calc(50% - 20px);
+	}
+
+	.footer .footer-flex,
+	.services .services-flex,
+	.team .team-flex {
+		flex-direction: column;
+		gap: 1.5rem;
+		text-align: center;
+	}
+
+	.services .services-flex p {
+		text-align: left;
+	}
+}
+
+@media (max-width: 576px) {
+	.header .header-flex {
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+}
